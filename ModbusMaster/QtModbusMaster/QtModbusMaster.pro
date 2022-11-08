@@ -18,11 +18,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     Modbus.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    writeregistermodel.cpp
 
 HEADERS += \
     Modbus.h \
-    mainwindow.h
+    Types.h \
+    mainwindow.h \
+    writeregistermodel.h
 
 FORMS += \
     mainwindow.ui

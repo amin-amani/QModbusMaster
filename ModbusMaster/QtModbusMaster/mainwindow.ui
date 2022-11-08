@@ -13,8 +13,373 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="CmbPortName">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>211</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnOpenPort">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>20</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnRead">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>20</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Read</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnWrite">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>20</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Write</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>741</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="LabFeederRatio">
+       <property name="text">
+        <string>Feeder Ratio = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="BtnFeedRatio">
+       <property name="text">
+        <string>SET Feed Ratio</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="LabValve1">
+       <property name="text">
+        <string>Valve 1 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="BtnValve1">
+       <property name="text">
+        <string>SET Valve 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="LabLightIntensity">
+       <property name="text">
+        <string>Light intensity = 0 </string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="BtnLightIntensity">
+       <property name="text">
+        <string>SET Light Intensity</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="LabValve2">
+       <property name="text">
+        <string>Valve 2 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="BtnValve2">
+       <property name="text">
+        <string>SET Valve 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="LabValveDuration">
+       <property name="text">
+        <string>Valve duration = 0 </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="BtnValveDuration">
+       <property name="text">
+        <string>SET Valve Duration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="LabValve3">
+       <property name="text">
+        <string>Valve 3 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="BtnValve3">
+       <property name="text">
+        <string>SET Valve 3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="LabValveDelay">
+       <property name="text">
+        <string>Valve delay =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="BtnValveDelay">
+       <property name="text">
+        <string>SET Valve Delay</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="LabValve4">
+       <property name="text">
+        <string>Valve 4 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QPushButton" name="BtnValve4">
+       <property name="text">
+        <string>SET Valve 4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="LabMainBoardID">
+       <property name="text">
+        <string>Main Board ID = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="BtnMainBoardID">
+       <property name="text">
+        <string>SET Main Board ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="LabValve5">
+       <property name="text">
+        <string>Valve 5 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="BtnValve5">
+       <property name="text">
+        <string>SET Valve 5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="LabFeederOnOff">
+       <property name="text">
+        <string>Feeder on/off = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="BtnFeederOnOff">
+       <property name="text">
+        <string>SET Feeder On/Off</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLabel" name="LabValve6">
+       <property name="text">
+        <string>Valve 6 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="QPushButton" name="BtnValve6">
+       <property name="text">
+        <string>SET Valve 6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="LabTrigOnOff">
+       <property name="text">
+        <string>Trig On/Off = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="BtnTrigOnOff">
+       <property name="text">
+        <string>SET Trig On/Off</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLabel" name="LabValve7">
+       <property name="text">
+        <string>Valve 7 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="BtnValve7">
+       <property name="text">
+        <string>SET Valve 7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="LabPcOnOff">
+       <property name="text">
+        <string>PC On/Off = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="BtnPcOnOff">
+       <property name="text">
+        <string>SET PC On/Off</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QLabel" name="LabValve8">
+       <property name="text">
+        <string>Valve 8 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="QPushButton" name="BtnValve8">
+       <property name="text">
+        <string>SET Valve 8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="LabPcReset">
+       <property name="text">
+        <string>PC Reset = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QPushButton" name="BtnPcReset">
+       <property name="text">
+        <string>SET PC Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLabel" name="LabValve9">
+       <property name="text">
+        <string>Valve 9 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3">
+      <widget class="QPushButton" name="BtnValve9">
+       <property name="text">
+        <string>SET Valve 9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QLabel" name="LabValve10">
+       <property name="text">
+        <string>Valve 10 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3" rowspan="2">
+      <widget class="QPushButton" name="BtnValve10">
+       <property name="text">
+        <string>SET Valve 10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="2">
+      <widget class="QLabel" name="LabValve11">
+       <property name="text">
+        <string>Valve 11 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="3">
+      <widget class="QPushButton" name="BtnValve11">
+       <property name="text">
+        <string>SET Valve 11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="LabLED">
+       <property name="text">
+        <string>LED = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QPushButton" name="BtnLED">
+       <property name="text">
+        <string>SET LED</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
