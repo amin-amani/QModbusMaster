@@ -37,6 +37,51 @@ bool Modbus::IsConnected()
    return false;
 }
 //==========================================================================================================
+uint16_t Modbus::ReadValue( RealyAlarmDiscreteInput value , int deviceID)
+{
+    auto *reply = modbusDevice->sendReadRequest(ReadRequest((int)value,1,QModbusDataUnit::RegisterType::DiscreteInputs), deviceID);
+    connect(reply, SIGNAL(finished()), this,SLOT( ReadyRead()));
+    WaiteDataReceive(100);
+    reply->deleteLater();
+    if(_replay.count()<1)
+    {
+        qDebug()<<"read val error";
+        return 0;
+    }
+
+    return _replay[0];
+}
+//==========================================================================================================
+uint16_t Modbus::ReadValue( RealyAlarmInputs value , int deviceID)
+{
+    auto *reply = modbusDevice->sendReadRequest(ReadRequest((int)value,1,QModbusDataUnit::RegisterType::InputRegisters), deviceID);
+    connect(reply, SIGNAL(finished()), this,SLOT( ReadyRead()));
+    WaiteDataReceive(100);
+    reply->deleteLater();
+    if(_replay.count()<1)
+    {
+        qDebug()<<"read val error";
+        return 0;
+    }
+
+    return _replay[0];
+}
+//==========================================================================================================
+uint16_t Modbus::ReadValue( RealyAlarmCoils value , int deviceID)
+{
+    auto *reply = modbusDevice->sendReadRequest(ReadRequest((int)value,1,QModbusDataUnit::RegisterType::Coils), deviceID);
+    connect(reply, SIGNAL(finished()), this,SLOT( ReadyRead()));
+    WaiteDataReceive(100);
+    reply->deleteLater();
+    if(_replay.count()<1)
+    {
+        qDebug()<<"read val error";
+        return 0;
+    }
+
+    return _replay[0];
+}
+//==========================================================================================================
 uint16_t Modbus::ReadValue( RealyAlarmHoldings value , int deviceID)
 {
     auto *reply = modbusDevice->sendReadRequest(ReadRequest((int)value,1,QModbusDataUnit::RegisterType::HoldingRegisters), deviceID);

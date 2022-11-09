@@ -65,5 +65,13 @@ private slots:
     void on_BtnCamBox2TempSensorSerNum_clicked();
     void on_BtnProcessBoxTempSetpoint_clicked();
     void on_BtnCamboxTempSetpoint_clicked();
+    void on_BtnRelayAlarmRelay1_clicked();
+    void on_BtnRelayAlarmRelay2_clicked();
+    void on_BtnRelayAlarmRelay3_clicked();
+    void on_BtnRelayAlarmRelay4_clicked();
+    void on_BtnModemRelay_clicked();
+    void on_BtnFanBox_clicked();
+    void on_BtnProcessorBoxTemperature_clicked();
+    void on_BtnCH2Switch_clicked();
 };
 #endif // MAINWINDOW_H

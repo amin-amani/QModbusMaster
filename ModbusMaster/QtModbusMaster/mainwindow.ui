@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>810</width>
-    <height>778</height>
+    <width>793</width>
+    <height>820</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -369,161 +369,234 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="LabDifferentialTemp">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>440</y>
-      <width>241</width>
-      <height>25</height>
+      <x>20</x>
+      <y>390</y>
+      <width>761</width>
+      <height>371</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Differential Temp = 0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LabProcessBoxTempSetpoint">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>470</y>
-      <width>241</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ProcessBoxTempSetpoint =  0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LabCamBox1TempSensorSerNum">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>530</y>
-      <width>271</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cam Box1 Temp SensorSerNum = 0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LabCamBoxTempSetpoint">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>500</y>
-      <width>271</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cam Box TempSet point = 0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LabCamBox2TempSensorSerNum">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>560</y>
-      <width>271</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CamBox2 TempSensorSerNum = 0 </string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="BtnDifferentialTemp">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>440</y>
-      <width>251</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>DifferentialTemp</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="BtnProcessBoxTempSetpoint">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>470</y>
-      <width>251</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ProcessBoxTempSetpoint</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="BtnCamBox1TempSensorSerNum">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>530</y>
-      <width>251</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CamBox1TempSensorSerNum</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="BtnCamBox2TempSensorSerNum">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>560</y>
-      <width>251</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CamBox2TempSensorSerNum</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="BtnCamboxTempSetpoint">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>500</y>
-      <width>251</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Cam Box TempSet point</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LabProcessBoxTempSensorSerNum">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>590</y>
-      <width>271</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Process Box TempSensor SerNum = 0</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="BtnProcesboxTempSensorSerNum">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>590</y>
-      <width>251</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Process Box TempSensor SerNum</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="5" column="1" rowspan="2">
+      <widget class="QPushButton" name="BtnCamBox2TempSensorSerNum">
+       <property name="text">
+        <string>CamBox2TempSensorSerNum</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="LabDifferentialTemp">
+       <property name="text">
+        <string>Differential Temp = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" rowspan="2">
+      <widget class="QPushButton" name="BtnCamBox1TempSensorSerNum">
+       <property name="text">
+        <string>CamBox1TempSensorSerNum</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2" rowspan="2">
+      <widget class="QLabel" name="LabRelayAlarmRelay4">
+       <property name="text">
+        <string>Relay 4 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3" rowspan="2">
+      <widget class="QPushButton" name="BtnFanBox">
+       <property name="text">
+        <string>Fan box</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="BtnCamboxTempSetpoint">
+       <property name="text">
+        <string>Cam Box TempSet point</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="LabPressureSensor">
+       <property name="text">
+        <string>Pressure sensor =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" rowspan="2">
+      <widget class="QLabel" name="LabCamBox1TempSensorSerNum">
+       <property name="text">
+        <string>Cam Box1 Temp SensorSerNum = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="LabCamera1Temperature">
+       <property name="text">
+        <string>Camera 1 Temperature =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" rowspan="2">
+      <widget class="QLabel" name="LabCamBox2TempSensorSerNum">
+       <property name="text">
+        <string>CamBox2 TempSensorSerNum = 0 </string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="BtnProcessBoxTempSetpoint">
+       <property name="text">
+        <string>ProcessBoxTempSetpoint</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" rowspan="2">
+      <widget class="QPushButton" name="BtnRelayAlarmRelay3">
+       <property name="text">
+        <string>Relay3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="LabProcessorBoxTemperature">
+       <property name="text">
+        <string>Processor Box Temperature =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="0" rowspan="2">
+      <widget class="QLabel" name="LabCH1Switch">
+       <property name="text">
+        <string>CH1-Switch=0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="BtnRelayAlarmRelay1">
+       <property name="text">
+        <string>Relay1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="LabRelayAlarmRelay1">
+       <property name="text">
+        <string>Relay 1 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="18" column="0">
+      <widget class="QLabel" name="LabCH2Switch">
+       <property name="text">
+        <string>CH2-Switch=0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0" rowspan="2">
+      <widget class="QLabel" name="LabBoxSwitch">
+       <property name="text">
+        <string>Box_Switch =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="LabProcessBoxTempSetpoint">
+       <property name="text">
+        <string>ProcessBoxTempSetpoint =  0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1" rowspan="2">
+      <widget class="QPushButton" name="BtnProcesboxTempSensorSerNum">
+       <property name="text">
+        <string>Process Box TempSensor SerNum</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="BtnDifferentialTemp">
+       <property name="text">
+        <string>DifferentialTemp</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" rowspan="2">
+      <widget class="QLabel" name="LabProcessBoxTempSensorSerNum">
+       <property name="text">
+        <string>Process Box TempSensor SerNum = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2" rowspan="2">
+      <widget class="QLabel" name="LabRelayAlarmFanBox">
+       <property name="text">
+        <string>Fan box = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="LabCamBoxTempSetpoint">
+       <property name="text">
+        <string>Cam Box TempSet point = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3" rowspan="2">
+      <widget class="QPushButton" name="BtnModemRelay">
+       <property name="text">
+        <string>modem relay</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0" rowspan="2">
+      <widget class="QLabel" name="LabCamera2Temperature">
+       <property name="text">
+        <string>Camera 2 Temperature =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="LabRelayAlarmRelay2">
+       <property name="text">
+        <string>Relay 2 =0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3" rowspan="2">
+      <widget class="QPushButton" name="BtnRelayAlarmRelay4">
+       <property name="text">
+        <string>Relay 4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2" rowspan="2">
+      <widget class="QLabel" name="LabRelayAlarmModemRelay">
+       <property name="text">
+        <string>modem relay = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2" rowspan="2">
+      <widget class="QLabel" name="LabRelayAlarmRelay3">
+       <property name="text">
+        <string>Relay 3 = 0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="BtnRelayAlarmRelay2">
+       <property name="text">
+        <string>Relay2</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -531,7 +604,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>810</width>
+     <width>793</width>
      <height>22</height>
     </rect>
    </property>

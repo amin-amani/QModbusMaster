@@ -104,7 +104,54 @@ void MainWindow::ReadAllParameters()
     WaitMs(10);
     temp= "Process Box Temp Sensor SerNum = "+QString::number( _modbus.ReadValue(RealyAlarmHoldings::ProcessBoxTempSensorSerNum,RelayAlarmModbusID));
     ui->LabProcessBoxTempSensorSerNum->setText(temp);
- }
+
+
+    WaitMs(10);
+    temp= "Relay1 = "+QString::number( _modbus.ReadValue(RealyAlarmCoils::Relay1,RelayAlarmModbusID));
+    ui->LabRelayAlarmRelay1->setText(temp);
+    WaitMs(10);
+    temp= "Relay2 = "+QString::number( _modbus.ReadValue(RealyAlarmCoils::Relay2,RelayAlarmModbusID));
+    ui->LabRelayAlarmRelay2->setText(temp);
+    WaitMs(10);
+    temp= "Relay3 = "+QString::number( _modbus.ReadValue(RealyAlarmCoils::Relay3,RelayAlarmModbusID));
+    ui->LabRelayAlarmRelay3->setText(temp);
+    WaitMs(10);
+    temp= "Relay4 = "+QString::number( _modbus.ReadValue(RealyAlarmCoils::Relay4,RelayAlarmModbusID));
+    ui->LabRelayAlarmRelay4->setText(temp);
+    WaitMs(10);
+    temp= "ModemRelay = "+QString::number( _modbus.ReadValue(RealyAlarmCoils::ModemRelay,RelayAlarmModbusID));
+    ui->LabRelayAlarmModemRelay->setText(temp);
+    WaitMs(10);
+    temp= "FanBox = "+QString::number( _modbus.ReadValue(RealyAlarmCoils::FanBox,RelayAlarmModbusID));
+    ui->LabRelayAlarmFanBox->setText(temp);
+
+    WaitMs(10);
+    temp= "Pressuresensor = "+QString::number( _modbus.ReadValue(RealyAlarmInputs::Pressuresensor,RelayAlarmModbusID));
+    ui->LabPressureSensor->setText(temp);
+    WaitMs(10);
+    temp= "Camera1Temperature = "+QString::number( _modbus.ReadValue(RealyAlarmInputs::Camera1Temperature,RelayAlarmModbusID));
+    ui->LabCamera1Temperature->setText(temp);
+    WaitMs(10);
+    temp= "Camera2Temperature = "+QString::number( _modbus.ReadValue(RealyAlarmInputs::Camera2Temperature,RelayAlarmModbusID));
+    ui->LabCamera2Temperature->setText(temp);
+    WaitMs(10);
+    temp= "ProcessorBoxTemperature = "+QString::number( _modbus.ReadValue(RealyAlarmInputs::ProcessorBoxTemperature,RelayAlarmModbusID));
+    ui->LabProcessorBoxTemperature->setText(temp);
+
+
+    WaitMs(10);
+    temp= "BoxSwitch = "+QString::number( _modbus.ReadValue(RealyAlarmDiscreteInput::BoxSwitch,RelayAlarmModbusID));
+    ui->LabBoxSwitch->setText(temp);
+
+    WaitMs(10);
+    temp= "CH1Switch = "+QString::number( _modbus.ReadValue(RealyAlarmDiscreteInput::CH1Switch,RelayAlarmModbusID));
+    ui->LabCH1Switch->setText(temp);
+
+    WaitMs(10);
+    temp= "CH2Switch = "+QString::number( _modbus.ReadValue(RealyAlarmDiscreteInput::CH2Switch,RelayAlarmModbusID));
+    ui->LabCH2Switch->setText(temp);
+
+}
 //========================================================================================================
 void MainWindow::on_BtnOpenPort_clicked()
 {
@@ -351,5 +398,63 @@ void MainWindow::on_BtnCamboxTempSetpoint_clicked()
     static bool toggle=0;
     toggle=!toggle;
     _modbus.WriteParameter((int)RealyAlarmHoldings::CamBoxTempSetpoint, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::HoldingRegisters);
+
+}
+
+void MainWindow::on_BtnRelayAlarmRelay1_clicked()
+{
+    static bool toggle=0;
+    toggle=!toggle;
+    _modbus.WriteParameter((int)RealyAlarmCoils::Relay1, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::Coils);
+
+}
+
+void MainWindow::on_BtnRelayAlarmRelay2_clicked()
+{
+    static bool toggle=0;
+    toggle=!toggle;
+    _modbus.WriteParameter((int)RealyAlarmCoils::Relay2, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::Coils);
+
+}
+
+void MainWindow::on_BtnRelayAlarmRelay3_clicked()
+{
+    static bool toggle=0;
+    toggle=!toggle;
+    _modbus.WriteParameter((int)RealyAlarmCoils::Relay3, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::Coils);
+
+}
+
+void MainWindow::on_BtnRelayAlarmRelay4_clicked()
+{
+    static bool toggle=0;
+    toggle=!toggle;
+    _modbus.WriteParameter((int)RealyAlarmCoils::Relay4, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::Coils);
+
+}
+
+void MainWindow::on_BtnModemRelay_clicked()
+{
+    static bool toggle=0;
+    toggle=!toggle;
+    _modbus.WriteParameter((int)RealyAlarmCoils::ModemRelay, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::Coils);
+
+}
+
+void MainWindow::on_BtnFanBox_clicked()
+{
+    static bool toggle=0;
+    toggle=!toggle;
+    _modbus.WriteParameter((int)RealyAlarmCoils::FanBox, toggle,RelayAlarmModbusID,QModbusDataUnit::RegisterType::Coils);
+
+}
+
+void MainWindow::on_BtnProcessorBoxTemperature_clicked()
+{
+
+}
+
+void MainWindow::on_BtnCH2Switch_clicked()
+{
 
 }
