@@ -20,12 +20,36 @@ bool Modbus::ConnectToDevice()
 {
     return  modbusDevice->connectDevice();
 }
+//==========================================================================================================
+
+bool Modbus::DisconnectFromDevice()
+{
+     modbusDevice->disconnectDevice();
+     return true;
+
+}
+//==========================================================================================================
 
 bool Modbus::IsConnected()
 {
     if(modbusDevice==nullptr)return false;
    if(modbusDevice->state()==QModbusDevice::State::ConnectedState)return true;
    return false;
+}
+//==========================================================================================================
+uint16_t Modbus::ReadValue( RealyAlarmHoldings value , int deviceID)
+{
+    auto *reply = modbusDevice->sendReadRequest(ReadRequest((int)value,1,QModbusDataUnit::RegisterType::HoldingRegisters), deviceID);
+    connect(reply, SIGNAL(finished()), this,SLOT( ReadyRead()));
+    WaiteDataReceive(100);
+    reply->deleteLater();
+    if(_replay.count()<1)
+    {
+        qDebug()<<"read val error";
+        return 0;
+    }
+
+    return _replay[0];
 }
 //==========================================================================================================
 uint16_t Modbus::ReadValue(MainBoardCoils InputParameters , int deviceID)

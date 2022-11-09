@@ -32,7 +32,7 @@ enum class RealyAlarmHoldings
 {
 CamBoxTempSetpoint=0,
 ProcessBoxTempSetpoint=1,
-differentialTemp=2,
+DifferentialTemp=2,
 ProcessBoxTempSensorSerNum=3,
 CamBox1TempSensorSerNum=4,
 CamBox2TempSensorSerNum=5

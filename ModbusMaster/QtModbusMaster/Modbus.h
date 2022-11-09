@@ -32,6 +32,8 @@ public:
     uint16_t ReadValue(MainBoardHoldings InputParameters, int deviceID);
     uint16_t ReadValue(MainBoardCoils InputParameters , int deviceID);
     void WriteParameter(int parameter, uint16_t value, int deviceID, QModbusDataUnit::RegisterType registerType) throw(std::runtime_error);
+    uint16_t ReadValue(RealyAlarmHoldings value, int deviceID);
+    bool DisconnectFromDevice();
 public slots:
     void ReadyRead();
     void ModBusErrorHandler(QModbusDevice::Error error);

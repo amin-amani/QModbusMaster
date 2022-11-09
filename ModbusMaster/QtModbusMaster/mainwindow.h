@@ -5,12 +5,14 @@
 #include <QDebug>
 #include <QTimer>
 #include <QSerialPortInfo>
+#include <QThread>
 #include "Modbus.h"
 #include "Types.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 #define MainBoardModbusID 1
+#define RelayAlarmModbusID 100
 
 class MainWindow : public QMainWindow
 {
@@ -25,6 +27,7 @@ public:
 
 
 
+    void WaitMs(int ms);
 public slots:
     void ReadAllParameters();
 private:
@@ -57,5 +60,10 @@ private slots:
     void on_BtnValve9_clicked();
     void on_BtnValve10_clicked();
     void on_BtnValve11_clicked();
+    void on_BtnDifferentialTemp_clicked();
+    void on_BtnCamBox1TempSensorSerNum_clicked();
+    void on_BtnCamBox2TempSensorSerNum_clicked();
+    void on_BtnProcessBoxTempSetpoint_clicked();
+    void on_BtnCamboxTempSetpoint_clicked();
 };
 #endif // MAINWINDOW_H

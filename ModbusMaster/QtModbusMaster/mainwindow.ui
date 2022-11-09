@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>810</width>
+    <height>778</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>20</y>
+      <y>10</y>
       <width>211</width>
       <height>25</height>
      </rect>
@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>20</y>
+      <y>10</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -41,7 +41,7 @@
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>20</y>
+      <y>10</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -54,7 +54,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>20</y>
+      <y>10</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -63,11 +63,11 @@
      <string>Write</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>80</y>
+      <x>30</x>
+      <y>40</y>
       <width>741</width>
       <height>341</height>
      </rect>
@@ -369,13 +369,169 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="LabDifferentialTemp">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>440</y>
+      <width>241</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Differential Temp = 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabProcessBoxTempSetpoint">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>470</y>
+      <width>241</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ProcessBoxTempSetpoint =  0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabCamBox1TempSensorSerNum">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>530</y>
+      <width>271</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cam Box1 Temp SensorSerNum = 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabCamBoxTempSetpoint">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>500</y>
+      <width>271</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cam Box TempSet point = 0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabCamBox2TempSensorSerNum">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>560</y>
+      <width>271</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CamBox2 TempSensorSerNum = 0 </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnDifferentialTemp">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>440</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DifferentialTemp</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnProcessBoxTempSetpoint">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>470</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ProcessBoxTempSetpoint</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnCamBox1TempSensorSerNum">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>530</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CamBox1TempSensorSerNum</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnCamBox2TempSensorSerNum">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>560</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CamBox2TempSensorSerNum</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnCamboxTempSetpoint">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>500</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cam Box TempSet point</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabProcessBoxTempSensorSerNum">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>590</y>
+      <width>271</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Process Box TempSensor SerNum = 0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnProcesboxTempSensorSerNum">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>590</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Process Box TempSensor SerNum</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>810</width>
      <height>22</height>
     </rect>
    </property>
